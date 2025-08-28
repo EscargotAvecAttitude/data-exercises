@@ -1,0 +1,99 @@
+# =========================
+# Python cache files
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.so
+
+# =========================
+# Virtual environments (venv or conda)
+# =========================
+.venv/
+venv/
+env/
+ENV/
+*.env
+*.venv
+
+# Conda environment
+.conda/
+conda-meta/
+*.conda
+*.lock
+.ipynb_checkpoints/
+
+# Keep only the shared dependency file
+!environment.yml
+
+# =========================
+# IDE / Editor settings
+# =========================
+# PyCharm
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# =========================
+# Jupyter / Databricks notebooks
+# =========================
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+*.dbc
+*.dbfs/
+*.databricks/
+**/.databricks/
+
+# =========================
+# OS-specific files (macOS / Windows)
+# =========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# =========================
+# Log files
+# =========================
+*.log
+
+# =========================
+# Temporary files
+# =========================
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+
+# =========================
+# Build / distribution outputs
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Test coverage / cache
+# =========================
+.coverage
+*.cover
+*.coverage.*
+.cache
+.pytest_cache/
+htmlcov/
+.tox/
+
+# =========================
+# SQL / Spark / Databricks data files
+# =========================
+*.sql~
+*.db
+*.sqlite
+*.parquet
+*.orc
+*.avro
