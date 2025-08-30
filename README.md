@@ -8,8 +8,11 @@ A collection of small exercises for data analysis practice.
 - (Planned) `spark-data-exercises/` — Databricks / Spark demos.
 
 ## Exercises
-- `exercise_01_insurance_data_analysis.py`  
+- `exercise_01_insurance_data_analysis.py`
   Clean sample medical data, calculate average BMI and insurance cost.
+- `exercise_02_caesar_cipher.py` 
+  Encode/decode text using a classic Caesar cipher (preserve case, keep punctuation).
+
 
 ## Environment
 This project uses **Conda** for environment management.  
