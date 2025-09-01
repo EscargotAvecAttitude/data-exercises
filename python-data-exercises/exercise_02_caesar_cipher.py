@@ -1,35 +1,32 @@
-def caesar_decode(message, offset):
-    spread_char = list(message)
-    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
-                "v", "w", "x", "y", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
-                "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    new_spread_char = []
-    for char in spread_char:
-        if char in alphabet:
-            new_char = alphabet[alphabet.index(char) + offset]
-        else:
-            new_char = char
-        new_spread_char.append(new_char)
-    return (''.join(new_spread_char))
-
-
+#Caesar Cipher Encode
 def caesar_encode(message, offset):
-    spread_char = list(message)
-    alphabet = ["q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
-                "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    new_spread_char = []
-    for char in spread_char:
-        if char in alphabet:
-            new_char = alphabet[alphabet.index(char) - offset]
-        else:
-            new_char = char
-        new_spread_char.append(new_char)
-    return (''.join(new_spread_char))
+  encrypted = ""
+  for char in message:
+    if 'a' <= char <= 'z':
+      new_char = chr((ord(char) - ord('a') - offset) % 26 + ord('a'))
+    elif 'A' <= char <= 'Z':
+      new_char = chr((ord(char) - ord('A') - offset) % 26 + ord('A'))
+    else:
+      new_char = char
+    encrypted += new_char
+  return encrypted
 
-message = "xubbe!"
-offset = 10
-print(caesar_decode(message, offset))
+#Caesar Cipher Decode
+def caesar_decode(message, offset):
+  decrypted = ""
+  for char in message:
+    if 'a' <= char <= 'z':
+      new_char = chr((ord(char) - ord('a') + offset) % 26 + ord('a'))
+    elif 'A' <= char <= 'Z':
+      new_char = chr((ord(char) - ord('A') + offset) % 26 + ord('A'))
+    else:
+      new_char = char
+    decrypted += new_char
+  return decrypted
 
-message = "goodbye!"
-offset = 14
-print(caesar_encode(message, offset))
+#Caesar Cipher Test
+message = 'to test encode and decode function'
+offset = 6
+print(caesar_encode(message,offset))
+message = "ni nymn yhwixy uhx xywixy zohwncih"
+print(caesar_decode(message,offset))

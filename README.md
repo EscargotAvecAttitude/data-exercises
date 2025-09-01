@@ -11,7 +11,9 @@ A collection of small exercises for data analysis practice.
 - `exercise_01_insurance_data_analysis.py`
   Clean sample medical data, calculate average BMI and insurance cost.
 - `exercise_02_caesar_cipher.py` 
-  Encode/decode text using a classic Caesar cipher (preserve case, keep punctuation).
+  Encode/decode text using a classic Caesar cipher.
+- `exercise_03_vigenere_cipher.py`
+  Encode/decode text using a classic Vigenère cipher.
 
 
 ## Environment
