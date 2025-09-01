@@ -11,6 +11,7 @@ def caesar_encode(message, offset):
     encrypted += new_char
   return encrypted
 
+
 #Caesar Cipher Decode
 def caesar_decode(message, offset):
   decrypted = ""
@@ -23,6 +24,7 @@ def caesar_decode(message, offset):
       new_char = char
     decrypted += new_char
   return decrypted
+
 
 #Caesar Cipher Test
 message = 'to test encode and decode function'
