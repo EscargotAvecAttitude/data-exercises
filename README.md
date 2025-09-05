@@ -13,6 +13,8 @@ A collection of small exercises for data analysis practice.
   Encode/decode text using a classic Caesar cipher.
 - `exercise_03_vigenere_cipher.py`
   Encode/decode text using a classic Vigenère cipher.
+- `exercise_04_simple_tarot.py`
+  Draw three Tarot cards to reveal gentle hints about the past, present, and future.
 
 
 ## Environment
