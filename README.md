@@ -15,6 +15,8 @@ A collection of small exercises for data analysis practice.
   Encode/decode text using a classic Vigenère cipher.
 - `exercise_04_simple_tarot.py`
   Draw three Tarot cards to reveal gentle hints about the past, present, and future.
+- `exercise_05_hurricanes_data_analysis.py`  
+  Analyze historical hurricanes data (1924–2018) to practice data manipulation and algorithmic thinking.
 
 
 ## Environment
