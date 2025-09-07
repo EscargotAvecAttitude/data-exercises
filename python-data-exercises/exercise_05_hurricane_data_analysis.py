@@ -137,8 +137,7 @@ def find_most_deaths(hurricanes):
     deadliest_hurricane = ""
     max_deaths = 0
     for name in hurricanes:
-        info = hurricanes[name]
-        deaths = info["Deaths"]
+        deaths = hurricanes[name]["Deaths"]
         if deaths > max_deaths:
             max_deaths = deaths
             deadliest_hurricane = name
@@ -160,8 +159,7 @@ mortality_scale = {
 def categorize_hurricanes_by_mortality(hurricanes):
     hurricanes_by_mortality = {0: [], 1: [], 2: [], 3: [], 4: [], 5: []}
     for name in hurricanes:
-        info = hurricanes[name]
-        deaths = info["Deaths"]
+        deaths = hurricanes[name]["Deaths"]
         if deaths == 0:
             rating = 0
         elif deaths <= mortality_scale[1]:
@@ -174,7 +172,7 @@ def categorize_hurricanes_by_mortality(hurricanes):
             rating = 4
         else:
             rating = 5
-        hurricanes_by_mortality[rating].append(info)
+        hurricanes_by_mortality[rating].append(hurricanes[name])
     return hurricanes_by_mortality
 
 
@@ -187,8 +185,7 @@ def find_most_damage(hurricanes):
     most_damage_hurricane = ""
     max_damage = 0
     for name in hurricanes:
-        info = hurricanes[name]
-        damage = info["Damage"]
+        damage = hurricanes[name]["Damage"]
         if damage == "Damages not recorded":
             continue
         if damage > max_damage:
@@ -214,8 +211,7 @@ damage_scale = {
 def categorize_hurricanes_by_damage(hurricanes):
     hurricanes_by_damage = {0: [], 1: [], 2: [], 3: [], 4: [], 5: []}
     for name in hurricanes:
-        info = hurricanes[name]
-        damage = info["Damage"]
+        damage = hurricanes[name]["Damage"]
         if damage == "Damages not recorded":
             continue
         if damage == 0:
@@ -230,7 +226,7 @@ def categorize_hurricanes_by_damage(hurricanes):
             rating = 4
         else:
             rating = 5
-        hurricanes_by_damage[rating].append(info)
+        hurricanes_by_damage[rating].append(hurricanes[name])
     return hurricanes_by_damage
 
 
