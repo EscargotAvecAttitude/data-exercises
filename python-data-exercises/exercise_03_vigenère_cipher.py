@@ -47,5 +47,5 @@ def vigenere_decrypt(message, keyword):
 message = 'to test encode and decode function'
 keyword = 'friends'
 print(vigenere_encrypt(message,keyword))
-message = 'ox lafq milgzr xvy mwybam adfygfwi'
+message = 'yf bifw wstwhr dfi umgbgw klvgglgs'
 print(vigenere_decrypt(message,keyword))
