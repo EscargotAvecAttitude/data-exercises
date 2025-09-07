@@ -3,9 +3,9 @@ def caesar_encode(message, offset):
   encrypted = ""
   for char in message:
     if 'a' <= char <= 'z':
-      new_char = chr((ord(char) - ord('a') - offset) % 26 + ord('a'))
+      new_char = chr((ord(char) - ord('a') + offset) % 26 + ord('a'))
     elif 'A' <= char <= 'Z':
-      new_char = chr((ord(char) - ord('A') - offset) % 26 + ord('A'))
+      new_char = chr((ord(char) - ord('A') + offset) % 26 + ord('A'))
     else:
       new_char = char
     encrypted += new_char
@@ -17,9 +17,9 @@ def caesar_decode(message, offset):
   decrypted = ""
   for char in message:
     if 'a' <= char <= 'z':
-      new_char = chr((ord(char) - ord('a') + offset) % 26 + ord('a'))
+      new_char = chr((ord(char) - ord('a') - offset) % 26 + ord('a'))
     elif 'A' <= char <= 'Z':
-      new_char = chr((ord(char) - ord('A') + offset) % 26 + ord('A'))
+      new_char = chr((ord(char) - ord('A') - offset) % 26 + ord('A'))
     else:
       new_char = char
     decrypted += new_char

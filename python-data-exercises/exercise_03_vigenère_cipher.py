@@ -10,9 +10,9 @@ def vigenere_encrypt(message, keyword):
             shift = ord(keyword[keyword_index % keyword_length]) - ord('a')
 
             if 'a' <= char <= 'z':
-                new_char = chr((ord(char) - ord('a') - shift) % 26 + ord('a'))
+                new_char = chr((ord(char) - ord('a') + shift) % 26 + ord('a'))
             else:
-                new_char = chr((ord(char) - ord('A') - shift) % 26 + ord('A'))
+                new_char = chr((ord(char) - ord('A') + shift) % 26 + ord('A'))
 
             encrypted += new_char
             keyword_index += 1
@@ -33,9 +33,9 @@ def vigenere_decrypt(message, keyword):
             shift = ord(keyword[keyword_index % keyword_length]) - ord('a')
 
             if 'a' <= char <= 'z':
-                new_char = chr((ord(char) - ord('a') + shift) % 26 + ord('a'))
+                new_char = chr((ord(char) - ord('a') - shift) % 26 + ord('a'))
             else:
-                new_char = chr((ord(char) - ord('A') + shift) % 26 + ord('A'))
+                new_char = chr((ord(char) - ord('A') - shift) % 26 + ord('A'))
 
             decrypted += new_char
             keyword_index += 1
